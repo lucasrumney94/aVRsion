@@ -51,6 +51,7 @@ public class SceneManage : MonoBehaviour {
 
 	private void HandleLeftTouchPad ()
 	{
+		Debug.Log ("Handle left is executed.");
 		level--; 
 		SceneManager.LoadScene(level, LoadSceneMode.Single);
 	}
