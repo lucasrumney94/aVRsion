@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 // The class uses the singleton pattern so that only one object exists.
 public class SceneManage : MonoBehaviour {
 	
-	[SerializeField] private InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
+	private InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
 	[SerializeField] private int level; 
 
 	public static SceneManage instance = null;

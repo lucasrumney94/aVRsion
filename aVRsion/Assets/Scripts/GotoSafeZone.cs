@@ -5,7 +5,7 @@ using UnityEngine;
 // This class allows the user to return to safe zone.
 public class GotoSafeZone : MonoBehaviour {
 
-	[SerializeField] private InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
+	private InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
 
 	public Vector3 safePlace = new Vector3();
 
