@@ -36,6 +36,7 @@ public class GotoSafeZone : MonoBehaviour {
 	{
 		// scripts for transforming player's position to the safe zone in the scene.
 		gameObject.transform.position = safePlace;
+		Debug.Log ("Current Player position: " + gameObject.transform.position);
 
 	}
 }
