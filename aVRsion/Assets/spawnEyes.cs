@@ -19,7 +19,7 @@ public class spawnEyes : MonoBehaviour {
             Vector3 EyePosition = maxDistance * Random.insideUnitSphere;
             EyePosition = new Vector3(EyePosition.x+minDistance, 0.1f + (1/flatness) * Mathf.Abs(EyePosition.y), EyePosition.z+minDistance);
             
-            GameObject go = GameObject.Instantiate(eyePrefab, EyePosition, Quaternion.identity);
+            GameObject go = GameObject.Instantiate(eyePrefab, EyePosition, Quaternion.identity) as GameObject;
             go.transform.SetParent(this.transform);
         }
 	}
