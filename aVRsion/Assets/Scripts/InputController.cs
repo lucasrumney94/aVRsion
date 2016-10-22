@@ -25,14 +25,16 @@ public class InputController : MonoBehaviour {
 	private void CheckInput()
 	{
 		// check if trigger is pressed
-		if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) 
-		{
+		if (device.GetPressDown (SteamVR_Controller.ButtonMask.Trigger)) {
 			Debug.Log ("Trigger Pressed!");
 
 			inputMan.ifTrigger = true;
 
 
 
+		} else	
+		{
+			inputMan.ifTrigger = false;
 		}
 
 		// check if left touch pad is pressed
@@ -42,6 +44,9 @@ public class InputController : MonoBehaviour {
 
 			inputMan.ifLeftTouchPad = true;
 
+		}else	
+		{
+			inputMan.ifLeftTouchPad = false;
 		}
 
 		// check if right touch pad is pressed
@@ -51,6 +56,9 @@ public class InputController : MonoBehaviour {
 
 			inputMan.ifRightTouchPad = true;
 
+		}else	
+		{
+			inputMan.ifRightTouchPad = false;
 		}
 
 	}
