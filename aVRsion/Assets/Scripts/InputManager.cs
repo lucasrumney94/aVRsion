@@ -22,8 +22,6 @@ public class InputManager : MonoBehaviour {
 		device = SteamVR_Controller.Input((int)trackedObject.index);
 
 		CheckInput();
-
-
 	}
 
 	private void CheckInput()
@@ -59,6 +57,7 @@ public class InputManager : MonoBehaviour {
 		}
 
 	}
+
 
 	private void OnDestroy()
 	{

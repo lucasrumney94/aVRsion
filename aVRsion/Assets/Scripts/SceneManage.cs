@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-// This class allows the user to return to safe zone and navigate to the previous and next scene.
+// This class allows the user to navigate to the previous and next scene.
 // The class uses the singleton pattern so that only one object exists.
 public class SceneManage : MonoBehaviour {
 	
@@ -29,10 +29,14 @@ public class SceneManage : MonoBehaviour {
 		level = 0;
 	}
 
+	void Update() 
+	{
+		Debug.Log("Current level: " + SceneManager.GetActiveScene().buildIndex);
+	}
+
 
 	private void OnEnable ()
 	{
-		m_Input.OnTrigger += HandleTrigger;
 		m_Input.OnLeftTouchPad += HandleLeftTouchPad;
 		m_Input.OnRightTouchPad += HandleRightTouchPad;
 	}
@@ -40,15 +44,8 @@ public class SceneManage : MonoBehaviour {
 
 	private void OnDisable ()
 	{
-		m_Input.OnTrigger -= HandleTrigger;
 		m_Input.OnLeftTouchPad -= HandleLeftTouchPad;
 		m_Input.OnRightTouchPad -= HandleRightTouchPad;
-	}
-
-
-	private void HandleTrigger ()
-	{
-		GoToSafeZone();
 	}
 
 
@@ -66,10 +63,6 @@ public class SceneManage : MonoBehaviour {
 	}
 
 
-	private void GoToSafeZone ()
-	{
-		// scripts for transforming player's position to the safe zone in the scene.
-	}
 
 
 }
