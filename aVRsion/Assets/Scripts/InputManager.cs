@@ -1,62 +1,45 @@
-﻿using System;
+﻿using System.Collections;
+using System;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
+
 
 	public event Action OnTrigger;                              // Called when trigger is pressed.
 	public event Action OnLeftTouchPad;                          // Called when LeftTouchPad is pressed.
 	public event Action OnRightTouchPad;                          // Called when RightTouchPad is pressed.
 
-	
-	private SteamVR_TrackedObject trackedObject;
-	private SteamVR_Controller.Device device;
+	public bool ifTrigger = false;
+	public bool ifLeftTouchPad = false;
+	public bool ifRightTouchPad = false;
 
 
-	void Start () 
+	void Update()
 	{
-		trackedObject = GetComponent<SteamVR_TrackedObject>();
-	}
-	
-	void Update () 
-	{
-		device = SteamVR_Controller.Input((int)trackedObject.index);
 
-		CheckInput();
-	}
 
-	private void CheckInput()
-	{
-		// check if trigger is pressed
-		if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger)) 
+		if (ifTrigger = true)
 		{
-			Debug.Log ("Trigger Pressed!");
-
 			// If there are any subscribers to OnTrigger call it.
 			if (OnTrigger != null)
 				OnTrigger();
-
 		}
 
-		// check if left touch pad is pressed
-		if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) && gameObject.name == "Controller (left)") 
+		if (ifLeftTouchPad = true)
 		{
-			Debug.Log ("Left Touchpad Pressed!");
-
+			// If there are any subscribers to OnTrigger call it.
 			if (OnLeftTouchPad != null)
 				OnLeftTouchPad();
-
 		}
 
-		// check if right touch pad is pressed
-		if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) && gameObject.name == "Controller (right)") 
+		if (ifRightTouchPad = true)
 		{
-			Debug.Log ("Right Touchpad Pressed!");
-
+			// If there are any subscribers to OnTrigger call it.
 			if (OnRightTouchPad != null)
 				OnRightTouchPad();
 		}
-
 	}
+
 
 
 	private void OnDestroy()
@@ -66,5 +49,4 @@ public class InputManager : MonoBehaviour {
 		OnLeftTouchPad = null;
 		OnRightTouchPad = null;
 	}
-
 }
