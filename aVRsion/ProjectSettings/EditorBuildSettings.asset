@@ -4,4 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/begin.unity
+  - enabled: 1
+    path: Assets/Scenes/scare1.unity
+  - enabled: 1
+    path: Assets/Scenes/scare2.unity
+  - enabled: 1
+    path: Assets/Scenes/scare3.unity
+  - enabled: 1
+    path: Assets/Scenes/scare4.unity
+  - enabled: 1
+    path: Assets/Scenes/scare5.unity
+  - enabled: 1
+    path: Assets/Scenes/scare6.unity
+  - enabled: 1
+    path: Assets/Scenes/end.unity
