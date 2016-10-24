@@ -16,36 +16,41 @@ public class InputManager : MonoBehaviour {
 
 	void Update()
 	{
-		Debug.Log ("trigger/left/right: " + ifTrigger, ifLeftTouchPad, ifRightTouchPad );
-
-		if (ifTrigger = true)
-		{
-			// If there are any subscribers to OnTrigger call it.
-			if (OnTrigger != null)
-				OnTrigger();
-		}
-
-		if (ifLeftTouchPad = true)
-		{
-			// If there are any subscribers to OnTrigger call it.
-			if (OnLeftTouchPad != null)
-				OnLeftTouchPad();
-		}
-
-		if (ifRightTouchPad = true)
-		{
-			// If there are any subscribers to OnTrigger call it.
-			if (OnRightTouchPad != null)
-				OnRightTouchPad();
-		}
-		ifTrigger = false;
-		ifLeftTouchPad = false;
-		ifRightTouchPad = false;
+        handleInput();
+		
 	}
 
 
-	 
-	private void OnDestroy()
+    public void handleInput()
+    {
+        Debug.Log("trigger/left/right: " + ifTrigger + ifLeftTouchPad + ifRightTouchPad);
+
+        if (ifTrigger == true)
+        {
+            // If there are any subscribers to OnTrigger call it.
+            if (OnTrigger != null)
+                OnTrigger();
+        }
+
+        if (ifLeftTouchPad == true)
+        {
+            // If there are any subscribers to OnTrigger call it.
+            if (OnLeftTouchPad != null)
+                OnLeftTouchPad();
+        }
+
+        if (ifRightTouchPad == true)
+        {
+            // If there are any subscribers to OnTrigger call it.
+            if (OnRightTouchPad != null)
+                OnRightTouchPad();
+        }
+        ifTrigger = false;
+        ifLeftTouchPad = false;
+        ifRightTouchPad = false;
+    }
+
+    private void OnDestroy()
 	{
 		// Ensure that all events are unsubscribed when this is destroyed.
 		OnTrigger = null;

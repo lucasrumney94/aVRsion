@@ -29,10 +29,12 @@ public class InputController : MonoBehaviour {
 			Debug.Log ("Trigger Pressed!");
 
 			inputMan.ifTrigger = true;
+            inputMan.handleInput();
 
 
 
-		} else	
+
+        } else	
 		{
 			inputMan.ifTrigger = false;
 		}
@@ -43,8 +45,11 @@ public class InputController : MonoBehaviour {
 			Debug.Log ("Left Touchpad Pressed!");
 
 			inputMan.ifLeftTouchPad = true;
+            inputMan.handleInput();
 
-		}else	
+
+        }
+        else	
 		{
 			inputMan.ifLeftTouchPad = false;
 		}
@@ -55,8 +60,11 @@ public class InputController : MonoBehaviour {
 			Debug.Log ("Right Touchpad Pressed!");
 
 			inputMan.ifRightTouchPad = true;
+            inputMan.handleInput();
 
-		}else	
+
+        }
+        else	
 		{
 			inputMan.ifRightTouchPad = false;
 		}
