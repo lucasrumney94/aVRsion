@@ -91,26 +91,84 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &364790023 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1303399924808648, guid: c4ccae4894c864b90b4c00dcb2de6f50,
+--- !u!114 &364790024 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114904421519980398, guid: aa841a0b9d946964db18ba329a8ce036,
     type: 2}
   m_PrefabInternal: {fileID: 1537858895}
---- !u!114 &364790024
+  m_Script: {fileID: 11500000, guid: fbb1105f894e6474785ba0f39ae0ba97, type: 3}
+--- !u!1 &686218342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 686218344}
+  - component: {fileID: 686218343}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &686218343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 364790023}
+  m_GameObject: {fileID: 686218342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbb1105f894e6474785ba0f39ae0ba97, type: 3}
+  m_Script: {fileID: 11500000, guid: fc46c44c52aac43feaa511aa5b39e5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ifTrigger: 0
-  ifLeftTouchPad: 0
-  ifRightTouchPad: 0
---- !u!43 &597433903
+  m_Input: {fileID: 364790024}
+  safePlace: {x: 0, y: 0, z: 0}
+--- !u!4 &686218344
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 686218342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &724095786
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
+--- !u!43 &1009600476
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -238,48 +296,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &686218342
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 686218344}
-  - component: {fileID: 686218343}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &686218343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 686218342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc46c44c52aac43feaa511aa5b39e5bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Input: {fileID: 364790024}
-  safePlace: {x: 0, y: 0, z: 0}
---- !u!4 &686218344
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 686218342}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1070271789
 Prefab:
   m_ObjectHideFlags: 0
@@ -322,11 +338,11 @@ Prefab:
     - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1645021292}
+      objectReference: {fileID: 724095786}
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 597433903}
+      objectReference: {fileID: 1009600476}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_IsPrefabParent: 0
@@ -432,76 +448,38 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4669560863985006, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+    - target: {fileID: 4177881361870196, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114088864054956380, guid: c4ccae4894c864b90b4c00dcb2de6f50,
-        type: 2}
-      propertyPath: m_Input
-      value: 
-      objectReference: {fileID: 364790024}
-    - target: {fileID: 1303399924808648, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c4ccae4894c864b90b4c00dcb2de6f50, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: aa841a0b9d946964db18ba329a8ce036, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1645021292
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}

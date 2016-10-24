@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 // This class allows the user to navigate to the previous and next scene.
 // The class uses the singleton pattern so that only one object exists.
 public class SceneManage : MonoBehaviour {
-	
-	public InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
-	[SerializeField] private int level; 
 
+    [SerializeField] private InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
+	public int level; 
+
+ 
 	public static SceneManage instance = null;
 
 	void Awake() 
@@ -23,15 +24,18 @@ public class SceneManage : MonoBehaviour {
 
 		DontDestroyOnLoad (gameObject);
 	}
+   
 
 	void Start() 
 	{
 		level = 0;
-	}
+        //FindObjectOfType<InputManager>().OnTrigger
+    }
+    
 
 	void Update() 
 	{
-		Debug.Log("Current level: " + SceneManager.GetActiveScene().buildIndex);
+		Debug.Log("Current level: " + SceneManager.GetActiveScene().buildIndex + "should be: " + level);
 	}
 
 
@@ -53,14 +57,15 @@ public class SceneManage : MonoBehaviour {
 	{
 		Debug.Log ("Handle left is executed.");
 		level--; 
-		SceneManager.LoadScene(level, LoadSceneMode.Single);
+		SceneManager.LoadScene(level);
 	}
 
 
 	private void HandleRightTouchPad ()
 	{
-		level++; 
-		SceneManager.LoadScene(level, LoadSceneMode.Single);	
+        Debug.Log("Handle right is executed.");
+        level++; 
+		SceneManager.LoadScene(level);	
 	}
 
 

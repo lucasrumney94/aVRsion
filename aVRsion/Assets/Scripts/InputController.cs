@@ -13,6 +13,7 @@ public class InputController : MonoBehaviour {
 	void Start () 
 	{
 		trackedObject = GetComponent<SteamVR_TrackedObject>();
+        inputMan = (InputManager) FindObjectOfType(typeof(InputManager));
 	}
 	
 	void Update () 
