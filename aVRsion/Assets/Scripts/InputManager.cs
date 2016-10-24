@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour {
 
 	void Update()
 	{
-
+		Debug.Log ("trigger/left/right: " + ifTrigger, ifLeftTouchPad, ifRightTouchPad );
 
 		if (ifTrigger = true)
 		{
@@ -38,10 +38,13 @@ public class InputManager : MonoBehaviour {
 			if (OnRightTouchPad != null)
 				OnRightTouchPad();
 		}
+		ifTrigger = false;
+		ifLeftTouchPad = false;
+		ifRightTouchPad = false;
 	}
 
 
-
+	 
 	private void OnDestroy()
 	{
 		// Ensure that all events are unsubscribed when this is destroyed.
