@@ -5,9 +5,9 @@ using UnityEngine;
 // This class allows the user to return to safe zone.
 public class GotoSafeZone : MonoBehaviour {
 
-	public InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
+	[SerializeField] InputManager m_Input;  // Reference to the VRInput in order to know when trigger, left and right touchpad is pressed.
 
-	public Vector3 safePlace = new Vector3();
+	public Vector3 safePosition = new Vector3();
 
 	void Start() 
 	{
@@ -35,8 +35,8 @@ public class GotoSafeZone : MonoBehaviour {
 	private void GoToSafeZone ()
 	{
 		// scripts for transforming player's position to the safe zone in the scene.
-		gameObject.transform.position = safePlace;
-		Debug.Log ("Current Player position: " + gameObject.transform.position);
+		gameObject.transform.position = safePosition;
+		//Debug.Log ("Current Player position: " + gameObject.transform.position);
 
 	}
 }
